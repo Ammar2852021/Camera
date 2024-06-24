@@ -2,7 +2,7 @@
 const videoElement = document.getElementById('videoElement');
 const canvasElement = document.getElementById('canvasElement');
 const captureButton = document.querySelector('button');
-
+let inner_blue = document.getElementById('inner_blue');
 async function getCameraStream() {
   try {
     const stream = await navigator.mediaDevices.getUserMedia({ video: true });
@@ -22,4 +22,12 @@ function captureSnapshot() {
   document.body.appendChild(imageElement);
 }
 
+
 window.addEventListener('load', getCameraStream);
+
+
+
+window.addEventListener('load',function(){
+
+  inner_blue.style.background='red';
+})
